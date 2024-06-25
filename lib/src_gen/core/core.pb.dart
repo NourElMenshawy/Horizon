@@ -1,0 +1,375 @@
+//
+//  Generated code. Do not modify.
+//  source: core/core.proto
+//
+// @dart = 2.12
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
+import 'dart:core' as $core;
+
+import 'package:protobuf/protobuf.dart' as $pb;
+
+class SubscribeConnectionStateRequest extends $pb.GeneratedMessage {
+  factory SubscribeConnectionStateRequest() => create();
+  SubscribeConnectionStateRequest._() : super();
+  factory SubscribeConnectionStateRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeConnectionStateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeConnectionStateRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeConnectionStateRequest clone() => SubscribeConnectionStateRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeConnectionStateRequest copyWith(void Function(SubscribeConnectionStateRequest) updates) => super.copyWith((message) => updates(message as SubscribeConnectionStateRequest)) as SubscribeConnectionStateRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeConnectionStateRequest create() => SubscribeConnectionStateRequest._();
+  SubscribeConnectionStateRequest createEmptyInstance() => create();
+  static $pb.PbList<SubscribeConnectionStateRequest> createRepeated() => $pb.PbList<SubscribeConnectionStateRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeConnectionStateRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeConnectionStateRequest>(create);
+  static SubscribeConnectionStateRequest? _defaultInstance;
+}
+
+class ConnectionStateResponse extends $pb.GeneratedMessage {
+  factory ConnectionStateResponse({
+    ConnectionState? connectionState,
+  }) {
+    final $result = create();
+    if (connectionState != null) {
+      $result.connectionState = connectionState;
+    }
+    return $result;
+  }
+  ConnectionStateResponse._() : super();
+  factory ConnectionStateResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConnectionStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConnectionStateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..aOM<ConnectionState>(1, _omitFieldNames ? '' : 'connectionState', subBuilder: ConnectionState.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConnectionStateResponse clone() => ConnectionStateResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConnectionStateResponse copyWith(void Function(ConnectionStateResponse) updates) => super.copyWith((message) => updates(message as ConnectionStateResponse)) as ConnectionStateResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConnectionStateResponse create() => ConnectionStateResponse._();
+  ConnectionStateResponse createEmptyInstance() => create();
+  static $pb.PbList<ConnectionStateResponse> createRepeated() => $pb.PbList<ConnectionStateResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ConnectionStateResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConnectionStateResponse>(create);
+  static ConnectionStateResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ConnectionState get connectionState => $_getN(0);
+  @$pb.TagNumber(1)
+  set connectionState(ConnectionState v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasConnectionState() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearConnectionState() => clearField(1);
+  @$pb.TagNumber(1)
+  ConnectionState ensureConnectionState() => $_ensure(0);
+}
+
+class SetMavlinkTimeoutRequest extends $pb.GeneratedMessage {
+  factory SetMavlinkTimeoutRequest({
+    $core.double? timeoutS,
+  }) {
+    final $result = create();
+    if (timeoutS != null) {
+      $result.timeoutS = timeoutS;
+    }
+    return $result;
+  }
+  SetMavlinkTimeoutRequest._() : super();
+  factory SetMavlinkTimeoutRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetMavlinkTimeoutRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetMavlinkTimeoutRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'timeoutS', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetMavlinkTimeoutRequest clone() => SetMavlinkTimeoutRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetMavlinkTimeoutRequest copyWith(void Function(SetMavlinkTimeoutRequest) updates) => super.copyWith((message) => updates(message as SetMavlinkTimeoutRequest)) as SetMavlinkTimeoutRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetMavlinkTimeoutRequest create() => SetMavlinkTimeoutRequest._();
+  SetMavlinkTimeoutRequest createEmptyInstance() => create();
+  static $pb.PbList<SetMavlinkTimeoutRequest> createRepeated() => $pb.PbList<SetMavlinkTimeoutRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetMavlinkTimeoutRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetMavlinkTimeoutRequest>(create);
+  static SetMavlinkTimeoutRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get timeoutS => $_getN(0);
+  @$pb.TagNumber(1)
+  set timeoutS($core.double v) { $_setDouble(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTimeoutS() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTimeoutS() => clearField(1);
+}
+
+class SetMavlinkTimeoutResponse extends $pb.GeneratedMessage {
+  factory SetMavlinkTimeoutResponse() => create();
+  SetMavlinkTimeoutResponse._() : super();
+  factory SetMavlinkTimeoutResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetMavlinkTimeoutResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetMavlinkTimeoutResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetMavlinkTimeoutResponse clone() => SetMavlinkTimeoutResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetMavlinkTimeoutResponse copyWith(void Function(SetMavlinkTimeoutResponse) updates) => super.copyWith((message) => updates(message as SetMavlinkTimeoutResponse)) as SetMavlinkTimeoutResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetMavlinkTimeoutResponse create() => SetMavlinkTimeoutResponse._();
+  SetMavlinkTimeoutResponse createEmptyInstance() => create();
+  static $pb.PbList<SetMavlinkTimeoutResponse> createRepeated() => $pb.PbList<SetMavlinkTimeoutResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SetMavlinkTimeoutResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetMavlinkTimeoutResponse>(create);
+  static SetMavlinkTimeoutResponse? _defaultInstance;
+}
+
+/// Connection state type.
+class ConnectionState extends $pb.GeneratedMessage {
+  factory ConnectionState({
+    $core.bool? isConnected,
+  }) {
+    final $result = create();
+    if (isConnected != null) {
+      $result.isConnected = isConnected;
+    }
+    return $result;
+  }
+  ConnectionState._() : super();
+  factory ConnectionState.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConnectionState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConnectionState', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..aOB(2, _omitFieldNames ? '' : 'isConnected')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConnectionState clone() => ConnectionState()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConnectionState copyWith(void Function(ConnectionState) updates) => super.copyWith((message) => updates(message as ConnectionState)) as ConnectionState;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConnectionState create() => ConnectionState._();
+  ConnectionState createEmptyInstance() => create();
+  static $pb.PbList<ConnectionState> createRepeated() => $pb.PbList<ConnectionState>();
+  @$core.pragma('dart2js:noInline')
+  static ConnectionState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConnectionState>(create);
+  static ConnectionState? _defaultInstance;
+
+  @$pb.TagNumber(2)
+  $core.bool get isConnected => $_getBF(0);
+  @$pb.TagNumber(2)
+  set isConnected($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasIsConnected() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearIsConnected() => clearField(2);
+}
+
+class ListComponentsRequest extends $pb.GeneratedMessage {
+  factory ListComponentsRequest() => create();
+  ListComponentsRequest._() : super();
+  factory ListComponentsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListComponentsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListComponentsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListComponentsRequest clone() => ListComponentsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListComponentsRequest copyWith(void Function(ListComponentsRequest) updates) => super.copyWith((message) => updates(message as ListComponentsRequest)) as ListComponentsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListComponentsRequest create() => ListComponentsRequest._();
+  ListComponentsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListComponentsRequest> createRepeated() => $pb.PbList<ListComponentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListComponentsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListComponentsRequest>(create);
+  static ListComponentsRequest? _defaultInstance;
+}
+
+class ListComponentsResponse extends $pb.GeneratedMessage {
+  factory ListComponentsResponse({
+    $core.Iterable<Component>? components,
+  }) {
+    final $result = create();
+    if (components != null) {
+      $result.components.addAll(components);
+    }
+    return $result;
+  }
+  ListComponentsResponse._() : super();
+  factory ListComponentsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListComponentsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListComponentsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..pc<Component>(1, _omitFieldNames ? '' : 'components', $pb.PbFieldType.PM, subBuilder: Component.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListComponentsResponse clone() => ListComponentsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListComponentsResponse copyWith(void Function(ListComponentsResponse) updates) => super.copyWith((message) => updates(message as ListComponentsResponse)) as ListComponentsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListComponentsResponse create() => ListComponentsResponse._();
+  ListComponentsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListComponentsResponse> createRepeated() => $pb.PbList<ListComponentsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListComponentsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListComponentsResponse>(create);
+  static ListComponentsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Component> get components => $_getList(0);
+}
+
+class Component extends $pb.GeneratedMessage {
+  factory Component({
+    $core.int? systemId,
+    $core.int? componentId,
+  }) {
+    final $result = create();
+    if (systemId != null) {
+      $result.systemId = systemId;
+    }
+    if (componentId != null) {
+      $result.componentId = componentId;
+    }
+    return $result;
+  }
+  Component._() : super();
+  factory Component.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Component.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Component', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'systemId', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'componentId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Component clone() => Component()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Component copyWith(void Function(Component) updates) => super.copyWith((message) => updates(message as Component)) as Component;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Component create() => Component._();
+  Component createEmptyInstance() => create();
+  static $pb.PbList<Component> createRepeated() => $pb.PbList<Component>();
+  @$core.pragma('dart2js:noInline')
+  static Component getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Component>(create);
+  static Component? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get systemId => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set systemId($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSystemId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSystemId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get componentId => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set componentId($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasComponentId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearComponentId() => clearField(2);
+}
+
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
