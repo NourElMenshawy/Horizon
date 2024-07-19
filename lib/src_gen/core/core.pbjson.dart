@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: core/core.proto
+//  source: core.proto
 //
 // @dart = 2.12
 
@@ -78,30 +78,30 @@ const ListComponentsRequest$json = {
 final $typed_data.Uint8List listComponentsRequestDescriptor = $convert.base64Decode(
     'ChVMaXN0Q29tcG9uZW50c1JlcXVlc3Q=');
 
+@$core.Deprecated('Use systemComponentsDescriptor instead')
+const SystemComponents$json = {
+  '1': 'SystemComponents',
+  '2': [
+    {'1': 'system_id', '3': 1, '4': 1, '5': 13, '10': 'systemId'},
+    {'1': 'component_ids', '3': 2, '4': 3, '5': 13, '10': 'componentIds'},
+  ],
+};
+
+/// Descriptor for `SystemComponents`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List systemComponentsDescriptor = $convert.base64Decode(
+    'ChBTeXN0ZW1Db21wb25lbnRzEhsKCXN5c3RlbV9pZBgBIAEoDVIIc3lzdGVtSWQSIwoNY29tcG'
+    '9uZW50X2lkcxgCIAMoDVIMY29tcG9uZW50SWRz');
+
 @$core.Deprecated('Use listComponentsResponseDescriptor instead')
 const ListComponentsResponse$json = {
   '1': 'ListComponentsResponse',
   '2': [
-    {'1': 'components', '3': 1, '4': 3, '5': 11, '6': '.mavsdk.rpc.core.Component', '10': 'components'},
+    {'1': 'systems', '3': 1, '4': 3, '5': 11, '6': '.mavsdk.rpc.core.SystemComponents', '10': 'systems'},
   ],
 };
 
 /// Descriptor for `ListComponentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listComponentsResponseDescriptor = $convert.base64Decode(
-    'ChZMaXN0Q29tcG9uZW50c1Jlc3BvbnNlEjoKCmNvbXBvbmVudHMYASADKAsyGi5tYXZzZGsucn'
-    'BjLmNvcmUuQ29tcG9uZW50Ugpjb21wb25lbnRz');
-
-@$core.Deprecated('Use componentDescriptor instead')
-const Component$json = {
-  '1': 'Component',
-  '2': [
-    {'1': 'system_id', '3': 1, '4': 1, '5': 13, '10': 'systemId'},
-    {'1': 'component_id', '3': 2, '4': 1, '5': 13, '10': 'componentId'},
-  ],
-};
-
-/// Descriptor for `Component`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List componentDescriptor = $convert.base64Decode(
-    'CglDb21wb25lbnQSGwoJc3lzdGVtX2lkGAEgASgNUghzeXN0ZW1JZBIhCgxjb21wb25lbnRfaW'
-    'QYAiABKA1SC2NvbXBvbmVudElk');
+    'ChZMaXN0Q29tcG9uZW50c1Jlc3BvbnNlEjsKB3N5c3RlbXMYASADKAsyIS5tYXZzZGsucnBjLm'
+    'NvcmUuU3lzdGVtQ29tcG9uZW50c1IHc3lzdGVtcw==');
 

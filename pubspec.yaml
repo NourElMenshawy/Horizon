@@ -23,9 +23,10 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^4.0.0
+  intl: ^0.17.0
 
 flutter:
   uses-material-design: true
   assets:
     - assets/Urban-Ray-logo_dark.png
-    - assets/simple.json
+    - assets/paramaters_config.json

@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: core/core.proto
+//  source: core.proto
 //
 // @dart = 2.12
 
@@ -230,6 +230,7 @@ class ConnectionState extends $pb.GeneratedMessage {
   void clearIsConnected() => clearField(2);
 }
 
+/// Defines a request to list components of all systems.
 class ListComponentsRequest extends $pb.GeneratedMessage {
   factory ListComponentsRequest() => create();
   ListComponentsRequest._() : super();
@@ -262,13 +263,74 @@ class ListComponentsRequest extends $pb.GeneratedMessage {
   static ListComponentsRequest? _defaultInstance;
 }
 
-class ListComponentsResponse extends $pb.GeneratedMessage {
-  factory ListComponentsResponse({
-    $core.Iterable<Component>? components,
+/// Defines a single system's components.
+class SystemComponents extends $pb.GeneratedMessage {
+  factory SystemComponents({
+    $core.int? systemId,
+    $core.Iterable<$core.int>? componentIds,
   }) {
     final $result = create();
-    if (components != null) {
-      $result.components.addAll(components);
+    if (systemId != null) {
+      $result.systemId = systemId;
+    }
+    if (componentIds != null) {
+      $result.componentIds.addAll(componentIds);
+    }
+    return $result;
+  }
+  SystemComponents._() : super();
+  factory SystemComponents.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SystemComponents.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SystemComponents', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'systemId', $pb.PbFieldType.OU3)
+    ..p<$core.int>(2, _omitFieldNames ? '' : 'componentIds', $pb.PbFieldType.KU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SystemComponents clone() => SystemComponents()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SystemComponents copyWith(void Function(SystemComponents) updates) => super.copyWith((message) => updates(message as SystemComponents)) as SystemComponents;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SystemComponents create() => SystemComponents._();
+  SystemComponents createEmptyInstance() => create();
+  static $pb.PbList<SystemComponents> createRepeated() => $pb.PbList<SystemComponents>();
+  @$core.pragma('dart2js:noInline')
+  static SystemComponents getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SystemComponents>(create);
+  static SystemComponents? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get systemId => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set systemId($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSystemId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSystemId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get componentIds => $_getList(1);
+}
+
+/// Defines the response for a request to list components of all systems.
+/// It includes a list of systems, each with their own list of component IDs.
+class ListComponentsResponse extends $pb.GeneratedMessage {
+  factory ListComponentsResponse({
+    $core.Iterable<SystemComponents>? systems,
+  }) {
+    final $result = create();
+    if (systems != null) {
+      $result.systems.addAll(systems);
     }
     return $result;
   }
@@ -277,7 +339,7 @@ class ListComponentsResponse extends $pb.GeneratedMessage {
   factory ListComponentsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListComponentsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
-    ..pc<Component>(1, _omitFieldNames ? '' : 'components', $pb.PbFieldType.PM, subBuilder: Component.create)
+    ..pc<SystemComponents>(1, _omitFieldNames ? '' : 'systems', $pb.PbFieldType.PM, subBuilder: SystemComponents.create)
     ..hasRequiredFields = false
   ;
 
@@ -303,71 +365,7 @@ class ListComponentsResponse extends $pb.GeneratedMessage {
   static ListComponentsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<Component> get components => $_getList(0);
-}
-
-class Component extends $pb.GeneratedMessage {
-  factory Component({
-    $core.int? systemId,
-    $core.int? componentId,
-  }) {
-    final $result = create();
-    if (systemId != null) {
-      $result.systemId = systemId;
-    }
-    if (componentId != null) {
-      $result.componentId = componentId;
-    }
-    return $result;
-  }
-  Component._() : super();
-  factory Component.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Component.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Component', package: const $pb.PackageName(_omitMessageNames ? '' : 'mavsdk.rpc.core'), createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'systemId', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'componentId', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Component clone() => Component()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Component copyWith(void Function(Component) updates) => super.copyWith((message) => updates(message as Component)) as Component;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static Component create() => Component._();
-  Component createEmptyInstance() => create();
-  static $pb.PbList<Component> createRepeated() => $pb.PbList<Component>();
-  @$core.pragma('dart2js:noInline')
-  static Component getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Component>(create);
-  static Component? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get systemId => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set systemId($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasSystemId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearSystemId() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.int get componentId => $_getIZ(1);
-  @$pb.TagNumber(2)
-  set componentId($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasComponentId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearComponentId() => clearField(2);
+  $core.List<SystemComponents> get systems => $_getList(0);
 }
 
 
